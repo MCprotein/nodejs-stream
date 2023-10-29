@@ -1,4 +1,3 @@
-// non-flowing 모드
 process.stdin
   .on('readable', () => {
     let chunk
