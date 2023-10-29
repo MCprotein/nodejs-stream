@@ -6,9 +6,12 @@
   "type": "module",
   "scripts": {
     "gzip-send": "node src/gzip-upload/gzip-send.js test-file localhost",
-    "gzip-receive": "node src/gzip-upload/gzip-receive.js"
+    "gzip-receive": "nodemon --watch src/gzip-upload/gzip-receive.js src/gzip-upload/gzip-receive.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
 }
