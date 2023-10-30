@@ -22,3 +22,18 @@ stream의 기본 동작모드는 non-flowing 모드이므로 flowing 모드를 �
 resume() 함수를 명시적으로 호출해야 한다. <br/>
 pause() 함수로 이벤트를 일시중지하여 들어오는 데이터를 내부 버퍼에 캐시할 수 있다. <br/>
 pause()를 호출하면 non-flowing 모드로 전환된다.
+
+<br/>
+<br/>
+사용자 지정 Readable 스트림을 구현하기 위해서는 Readable prototype을 상속하여 새로운 클래스를 만들어야 한다.<br/>
+구현된 클래스는 _read()함수의 구현을 제공해야 한다.
+
+```js
+readable._read(size)
+```
+
+Readable 클래스는 내부적으로 \_read() 함수를 호출하는데 이 함수는 push() 함수를 사용하여 내부 버퍼를 채운다.<br/>
+
+```js
+readable.push(chunk)
+```
