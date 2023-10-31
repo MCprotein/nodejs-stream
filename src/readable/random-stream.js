@@ -36,3 +36,18 @@ randomStream
   .on('end', () => {
     console.log(`Produced ${randomStream.emittedBytes} bytes of random data`)
   })
+
+/**
+ * 단순화된 생성자
+ */
+
+const randomStreamSimple = new Readable({
+  read(size) {
+    const chunk = chance.string({ length: size })
+    console.log(`Pushing chunk of size: ${chunk.length}`)
+    this.push(chunk, 'utf8')
+    if (chance.bool({ likelihood: 5 })) {
+      this.push(null)
+    }
+  }
+})
