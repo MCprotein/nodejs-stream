@@ -15,6 +15,7 @@
     "nodemon": "^3.0.1"
   },
   "dependencies": {
-    "chance": "^1.1.11"
+    "chance": "^1.1.11",
+    "mkdirp": "^3.0.1"
   }
 }
