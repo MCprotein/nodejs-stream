@@ -18,5 +18,3 @@ export class FilterByCountry extends Transform {
     cb()
   }
 }
-
-\
