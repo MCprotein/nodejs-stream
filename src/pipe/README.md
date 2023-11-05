@@ -44,3 +44,5 @@ stream1
 ```
 pipeline(stream1, stream2, stream3, ..., cb)
 ```
+
+파이프라인이 정상적으로 종료되든, 에러로 종료되든 어쨋든 완료가 되면 모든 스트림이 제거된다.
