@@ -44,5 +44,3 @@ stream1
 ```
 pipeline(stream1, stream2, stream3, ..., cb)
 ```
-
-각 스트림별로 에러핸들러를 등록할 수
