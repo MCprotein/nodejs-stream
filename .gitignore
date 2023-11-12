@@ -4,3 +4,5 @@ node_modules
 check-url/**
 files/**
 package-uppercase.json
+stderr.log
+stdout.log
